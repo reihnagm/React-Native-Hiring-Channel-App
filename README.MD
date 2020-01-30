@@ -25,7 +25,7 @@ $ nano .env
 
 ### Start Development Server
 ```bash
-$ npm run start
+$ npm run android
 ```
 
 ## Other Dependencies
