@@ -29,7 +29,6 @@ $ npm run android
 ```
 
 ## Other Dependencies
-- [react-native-dotenv](#)
 - [react-navigation](#)
 - [react-native-dotenv](#)
 - [react-native-elements](#)
