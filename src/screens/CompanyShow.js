@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, Image, ScrollView } from 'react-native';
+import React,{ useEffect } from 'react';
+import { View, Text, Image, ScrollView, BackHandler } from 'react-native';
 import { Tile } from 'react-native-elements';
 const CompanyShow = (props) => {
     let item = props.navigation.state.params.item;
@@ -8,6 +8,15 @@ const CompanyShow = (props) => {
     let email = item && item.email;
     let description = item && item.description;
     let location = item && item.description;
+    useEffect(() => {
+        BackHandler.addEventListener('hardwareBackPress', () => {
+            props.navigation.navigate('Companies');
+            return true;
+        });
+        () => {
+            BackHandler.remove();
+        }
+    },[]);
     return (
         <>
             <ScrollView>

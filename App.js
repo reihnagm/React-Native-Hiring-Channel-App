@@ -1,8 +1,8 @@
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
-import Engineers from './src/screens/Engineers';
-import Companies from './src/screens/Companies';
+import EngineersScreen from './src/screens/Engineers';
+import CompaniesScreen from './src/screens/Companies';
 import SignInScreen from './src/screens/SignIn';
 import SignUpScreen from './src/screens/SignUp';
 import EngineerShowScreen from './src/screens/EngineerShow';
@@ -10,8 +10,8 @@ import CompanyShowScreen from './src/screens/CompanyShow';
 import ProfileScreen from './src/screens/Profile';
 import AuthLoadingScreen from './src/screens/Auth';
 const HomeScreen =   createBottomTabNavigator({
-        Engineers,
-        Companies
+        Engineers: EngineersScreen,
+        Companies: CompaniesScreen
     }, {
     tabBarOptions: {
         activeTintColor: '#ffffff',
